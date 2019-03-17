@@ -1,14 +1,14 @@
 import threading
 
 
-class Node:
+class _Node:
 
     def __init__(self, key, value):
         self.key = key
         self.value = value
 
     def __eq__(self, other):
-        if isinstance(other, Node):
+        if isinstance(other, _Node):
             return self.key == other.key
         return False
 
@@ -30,7 +30,7 @@ class HashMap:
         self.lock.acquire()
         try:
             index = hash(key) % self.capacity
-            n = Node(key, value)
+            n = _Node(key, value)
             if not self.bucket_list[index]:
                 self.bucket_list[index] = [n]
             else:

@@ -15,7 +15,7 @@ Inserts Key-value pairs into the HashMap and does not allow any duplicate keys. 
 Returns the value of the key specified in the get call.
 ### remove(key)   
 Deletes the key-value pair based on the key specified in the call.
-### size()   
+### map_size()   
  Returns the current size of the HashMap.
 ### rehash()   
 Rehashes the HashMap once the load factor touches 0.75
